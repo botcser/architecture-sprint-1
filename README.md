@@ -23,3 +23,5 @@
 
 Задание 2
 https://drive.google.com/file/d/1o5ly2yp40RyneB3T-fiuzaFG6V1snYmY/view?usp=sharing
+
+Комментарий к ревью 0.1 добавлен на схему.
