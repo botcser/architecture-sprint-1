@@ -1,3 +1,9 @@
+// Перенести функции по соответствующим модулям.
+// Footer и ProtectedRoute перенести сюда и заменить локальный props на useState.
+// Хз связан ли Footer с локализацией Profile
+// PopupWithForm - хз, явно выглядит как и напрашивается быть абстрактным шаблоном и использоваться в нескольких микросервисах, хотя используется только в Контенте.
+// Вообще выделить бы отдельный компонент (не микросервис) Route и перенести туда логику маршнутов отсюда.
+
 import React from "react";
 import { Route, useHistory, Switch } from "react-router-dom";
 import Header from "./Header";
@@ -17,11 +23,9 @@ import ProtectedRoute from "./ProtectedRoute";
 import * as auth from "../utils/auth.js";
 
 function App() {
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
-    React.useState(false);
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
-    React.useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
   const [selectedCard, setSelectedCard] = React.useState(null);
   const [cards, setCards] = React.useState([]);
 
